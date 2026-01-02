@@ -1,5 +1,6 @@
 import { MenuIcon } from "lucide-react";
 
+import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,8 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-import Logo from "@/components/logo";
+import ThemeToggle from "@/components/theme-switcher";
 
 type NavigationItem = {
   title: string;
@@ -31,6 +31,7 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
               {item.title}
             </a>
           ))}
+          <ThemeToggle />
         </div>
 
         <div className="flex items-center gap-6">
