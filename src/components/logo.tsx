@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import Image from "next/image";
 
 import MMELogo from "@/assets/logo_partial.png";
@@ -10,7 +9,7 @@ const Logo = ({
   children,
 }: {
   className?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }) => {
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
