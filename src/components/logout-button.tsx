@@ -14,7 +14,7 @@ export function LogoutButton({
       className={className}
       action={async () => {
         "use server";
-        await signOut();
+        await signOut({ redirectTo: "/" });
       }}
     >
       <Button variant="outline" type="submit">
