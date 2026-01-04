@@ -42,6 +42,14 @@ const Navbar = async ({
               {item.title}
             </Link>
           ))}
+          {session?.user && (
+            <Link
+              href="/dashboard"
+              className="hover:text-primary max-md:hidden"
+            >
+              Dashboard
+            </Link>
+          )}
           {session?.user ? (
             <>
               <div className="flex flex-row gap-4 justify-center items-center">
