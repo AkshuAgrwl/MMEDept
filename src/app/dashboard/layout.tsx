@@ -1,3 +1,4 @@
+import { redirect, RedirectType } from "next/navigation";
 import { auth } from "@/lib/auth";
 
 import { AppSidebar } from "@/components/app-sidebar";
@@ -12,8 +13,10 @@ export default async function DashboardLayout({
   const session = await auth();
 
   if (!session?.user) {
-    return <div>Please log in to access the dashboard.</div>;
+    redirect("/login", RedirectType.replace);
   }
+  // @ts-expect-error none
+  console.log(session.user.hd);
 
   return (
     <SidebarProvider>
