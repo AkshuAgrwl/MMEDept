@@ -15,8 +15,6 @@ export default async function DashboardLayout({
   if (!session?.user) {
     redirect("/login", RedirectType.replace);
   }
-  // @ts-expect-error none
-  console.log(session.user.hd);
 
   return (
     <SidebarProvider>
